@@ -41,49 +41,27 @@ export default function Dashboard() {
 
             <WelcomeBanner name="Blessing" />
 
-            <div className="grid grid-cols-1 lg:grid-cols-15 gap-3 sm:gap-4 md:gap-5">
-                <div className="lg:col-span-5 space-y-3 sm:space-y-4">
-                    {activeWidgets.programs && (
-                        <div className="w-full">
-                            <ProgramsList />
-                        </div>
-                    )}
-                    {activeWidgets.stats && (
-                        <div className="w-full">
-                            <StatsChart />
-                        </div>
-                    )}
+            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-12 gap-4">
+                <div className="md:col-span-8 lg:col-span-8 xl:col-span-3 space-y-4">
+                    {activeWidgets.programs && <ProgramsList />}
+                    {activeWidgets.stats && <StatsChart />}
                 </div>
 
-                <div className="lg:col-span-10 space-y-3 sm:space-y-4">
-                    {activeWidgets.groupCalls && (
-                        <div className="w-full">
-                            <GroupCalls />
+                <div className="md:col-span-8 lg:col-span-8 xl:col-span-9 space-y-4">
+                    {activeWidgets.groupCalls && <GroupCalls />}
+                    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-12 gap-4">
+                        <div className="md:col-span-7 lg:col-span-7 space-y-4">
+                            {activeWidgets.applications && <Applications />}
                         </div>
-                    )}
-                    <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-3 sm:gap-4">
-                        {activeWidgets.applications && (
-                            <div className="col-span-3 w-full">
-                                <Applications />
-                            </div>
-                        )}
-                        <div className="col-span-2 space-y-3 sm:space-y-4">
-                            {activeWidgets.mentors && (
-                                <div className="w-full">
-                                    <Mentors />
-                                </div>
-                            )}
-                            {activeWidgets.recentActivities && (
-                                <div className="w-full">
-                                    <RecentActivities />
-                                </div>
-                            )}
+                        <div className="md:col-span-5 lg:col-span-5 space-y-4">
+                            {activeWidgets.mentors && <Mentors />}
+                            {activeWidgets.recentActivities && <RecentActivities />}
+
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Widget Modal */}
             {showWidgetModal && (
                 <WidgetModal
                     isOpen={showWidgetModal}

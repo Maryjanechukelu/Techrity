@@ -40,7 +40,7 @@ export default function Sidebar() {
     ];
 
     return (
-        <div className="w-64 md:w-64 h-screen bg-primaryDark flex flex-col text-white overflow-scroll mb-12 pb-12 ">
+        <div className="w-64 lg:w-64 md:w-64 h-screen bg-primaryDark flex flex-col text-white overflow-scroll mb-12 pb-12 ">
             {/* Logo */}
             <div className="p-4 flex items-center justify-between">
                 <Link href="/" className="flex items-center space-x-2">

@@ -70,7 +70,7 @@ export default function ProgramsList() {
                                     style={{ backgroundImage: `url(${program.img})` }}
                                 >
                                     <div className="absolute inset-0 bg-black/50 z-10" />
-                                    <h3 className="font-bold text-base sm:text-xl text-white mb-1 sm:mb-2 px-2 py-1 sm:py-2 z-20 relative">
+                                    <h3 className="font-bold text-base sm:text-base text-white mb-1 sm:mb-2 px-2 py-1 sm:py-2 z-20 relative">
                                         {program.title}
                                     </h3>
                                 </div>
@@ -82,7 +82,7 @@ export default function ProgramsList() {
 
                                 <p className="text-xs font-bold text-gray-700 mb-2 sm:mb-4 line-clamp-2">{program.description}</p>
 
-                                <div className="flex items-center justify-between">
+                                <div className="flex items-center flex-wrap gap-1 justify-between">
                                     <div className="flex -space-x-1 sm:-space-x-2">
                                         {Array(Math.min(program.mentors, 3)).fill(0).map((_, idx) => (
                                             <div key={idx} className="relative w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 border-white">
@@ -101,9 +101,13 @@ export default function ProgramsList() {
                                         )}
                                         <span className="ml-2 sm:ml-4 text-xs"> Mentors</span>
                                     </div>
-                                    <div className="flex space-x-1 sm:space-x-3">
-                                        <button className="text-xs text-primary bg-none border border-primary py-0.5 sm:py-1 px-2 sm:px-3 rounded">View</button>
-                                        <button className="text-xs text-white bg-primary py-0.5 sm:py-1 px-2 sm:px-3 rounded">Analyze</button>
+                                    <div className="flex items-center gap-1 sm:gap-2">
+                                        <button className="text-[10px] sm:text-xs whitespace-nowrap text-gray-600 border border-gray-300 py-0.5 sm:py-1 px-2 sm:px-3 rounded">
+                                            View
+                                        </button>
+                                        <button className="text-[10px] sm:text-xs whitespace-nowrap text-white bg-primary py-0.5 sm:py-1 px-2 sm:px-3 rounded">
+                                            Assign
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -117,7 +121,7 @@ export default function ProgramsList() {
                                     style={{ backgroundImage: `url(${program.img})` }}
                                 >
                                     <div className="absolute inset-0 bg-black/50 z-10" />
-                                    <h3 className="font-bold text-base sm:text-xl text-white mb-1 sm:mb-2 px-2 py-1 sm:py-2 z-20 relative">
+                                    <h3 className="font-bold text-base sm:text-base text-white mb-1 sm:mb-2 px-2 py-1 sm:py-2 z-20 relative">
                                         {program.title}
                                     </h3>
                                 </div>

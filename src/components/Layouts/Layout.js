@@ -13,7 +13,7 @@ export default function Layout({ children }) {
             <MobileNav open={sidebarOpen} setOpen={setSidebarOpen} />
 
             {/* Static sidebar for desktop */}
-            <div className="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0 z-20">
+            <div className="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0 lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0 z-20">
                 <Sidebar />
             </div>
 

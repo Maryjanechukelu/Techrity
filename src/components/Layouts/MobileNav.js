@@ -17,7 +17,7 @@ export default function MobileNav({ open, setOpen }) {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <div className="fixed inset-0 bg-gray-600 bg-opacity-75" />
+                    <div className="fixed inset-0 bg-white bg-opacity-75" />
                 </Transition.Child>
 
                 <div className="fixed inset-0 flex z-40">
@@ -47,7 +47,7 @@ export default function MobileNav({ open, setOpen }) {
                                         onClick={() => setOpen(false)}
                                     >
                                         <span className="sr-only">Close sidebar</span>
-                                        <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                                        <XMarkIcon className="h-6 w-6 text-primaryDark" aria-hidden="true" />
                                     </button>
                                 </div>
                             </Transition.Child>
